@@ -461,6 +461,19 @@ ul {
   height: 130px;
 }
 
+.message {
+  line-height: 50px;
+  margin-left: 50px;
+}
+
+.text-success {
+  color: #28a745;
+}
+
+.text-danger {
+  color: #dc3545;
+}
+
 .footer {
   padding: 20px 0 5px 0;
   background-color: #343a40;
@@ -759,6 +772,7 @@ h2 {
 }
 
 .contact-form input,
+.contact-form button,
 .contact-form textarea {
   border: 1px solid #ced4da;
   -webkit-box-flex: 1;
@@ -768,21 +782,25 @@ h2 {
 }
 
 .contact-form input::-webkit-input-placeholder,
+.contact-form button::-webkit-input-placeholder,
 .contact-form textarea::-webkit-input-placeholder {
   font-size: 12px;
 }
 
 .contact-form input:-ms-input-placeholder,
+.contact-form button:-ms-input-placeholder,
 .contact-form textarea:-ms-input-placeholder {
   font-size: 12px;
 }
 
 .contact-form input::-ms-input-placeholder,
+.contact-form button::-ms-input-placeholder,
 .contact-form textarea::-ms-input-placeholder {
   font-size: 12px;
 }
 
 .contact-form input::placeholder,
+.contact-form button::placeholder,
 .contact-form textarea::placeholder {
   font-size: 12px;
 }

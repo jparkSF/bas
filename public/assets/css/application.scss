@@ -20,6 +20,9 @@ $darkblue-1: #214364;
 $black-1: #343a40;
 $black-2: #373a3c;
 
+$success: #28a745;
+$danger: #dc3545;
+
 html {
   font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕",
     Roboto, Helvetica, Arial, sans-serif;
@@ -414,11 +417,23 @@ ul {
   height: 130px;
   // background-color: $skyblue-1;
 }
-
+.message {
+  line-height: 50px;
+  margin-left: 50px;
+}
+.text-success {
+  color: $success;
+}
+.text-danger {
+  color: $danger;
+}
 .footer {
   padding: 20px 0 5px 0;
   // height: 360px;
   background-color: $black-1;
+  // position: absolute;
+  // bottom: 0;
+  // width: 100%;
 }
 .footer-wrapper {
   max-width: 460px;
@@ -681,6 +696,7 @@ h2 {
     padding: 7px 0;
   }
   input,
+  button,
   textarea {
     border: 1px solid $gray-6;
     flex: 1;

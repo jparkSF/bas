@@ -110,13 +110,13 @@ class Nav extends Component {
           // console.log(count);
           if (count >= length) {
             // console.log("inside");
-            ul.animate({ top: "" }, 500);
+            ul.animate({ top: "" }, 1000);
             count = 0;
           } else {
             ul.animate({ top: `-=${itemHeight + 1}px` }, 1000);
           }
 
-          let firstChild = list[0];
+          // let firstChild = list[0];
           // firstChild.remove();
           // ul.append(firstChild);
         }
