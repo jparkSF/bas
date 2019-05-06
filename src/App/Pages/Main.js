@@ -146,7 +146,8 @@ class Main extends Component {
             backgroundRepeat: "no-repeat",
             backgroundSize: "100% auto",
             overflow: "hidden",
-            boxShadow: "0 0 0 1px rgba(0, 0, 0, 0.16)"
+            // boxShadow: "0 0 0 1px rgba(0, 0, 0, 0.16)",
+            border: "1px solid #dee2e6"
           };
 
           return (
@@ -189,7 +190,8 @@ class Main extends Component {
             backgroundRepeat: "no-repeat",
             backgroundSize: "100% auto",
             overflow: "hidden",
-            boxShadow: "0 0 0 1px rgba(0, 0, 0, 0.16)"
+            // boxShadow: "0 0 0 1px rgba(0, 0, 0, 0.16)",
+            border: "1px solid #dee2e6"
           };
 
           return (
@@ -249,8 +251,26 @@ class Main extends Component {
     );
   }
   render() {
+    // window.onclick = function(event) {
+    //   // if (!event.target.matches(".header-search")) {
+    //   //   window.$(".search-result").css("display", "none");
+    //   // }
+    //   // if (
+    //   //   !event.target.matches("#mySidenav") &&
+    //   //   !event.target.matches(".hamburger")
+    //   // ) {
+    //   //   window.$(".sidenav").css("width", "0");
+    //   // }
+
+    //   if (event.target.matches("#closeBtn")) {
+    //     window.$(".sidenav").css("width", "0");
+    //     window.$("button.hamburger").removeClass("is-active");
+    //   }
+    // };
+
     return (
       <div className="content">
+        {/* <SideMenuBar /> */}
         <main>
           <Link to={"/contact"} className="button--link">
             <section className="main-banner-1">{this.mainBanner()}</section>

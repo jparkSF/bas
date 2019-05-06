@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import db from "../db/app_db";
 import debounce from "lodash/debounce";
 import { isEmpty } from "lodash";
+import SideMenuBar from "./Pages/SideMenuBar";
 
 class Nav extends Component {
   constructor(props) {
@@ -130,7 +131,22 @@ class Nav extends Component {
       if (!event.target.matches(".header-search")) {
         window.$(".search-result").css("display", "none");
       }
+      // if (
+      //   !event.target.matches("#mySidenav") &&
+      //   !event.target.matches(".hamburger")
+      // ) {
+      //   window.$(".sidenav").css("width", "0");
+      // }
+
+      // if (event.target.matches("#closeBtn")) {
+      //   window.$(".sidenav").css("width", "0");
+      //   window.$("button.hamburger").removeClass("is-active");
+      // }
     };
+    // window.$("button.hamburger").click(function() {
+    //   window.$(this).toggleClass("is-active");
+    //   window.$(".sidenav").css("width", "200px");
+    // });
     let pathname = this.pathname;
     let ranks = this.state.ranks;
 
@@ -175,6 +191,11 @@ class Nav extends Component {
               상담문의
             </Link>
           </div>
+          <button className="hamburger hamburger--collapse" type="button">
+            <span className="hamburger-box">
+              <span className="hamburger-inner" />
+            </span>
+          </button>
         </div>
         <header className=" border-bottom-2 border-top">
           <div className="chart">
@@ -229,6 +250,7 @@ class Nav extends Component {
             </ul>
           </div>
         </header>
+        <SideMenuBar />
       </div>
     );
   }

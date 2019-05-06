@@ -31,7 +31,6 @@ class Info extends Component {
             </div>
           </div>
         </section>
-
         <section className="about-page-content-2">
           <div className="info-cards-wrapper narrow">
             <h1>베스트 아메리카와 함께 하세요!</h1>

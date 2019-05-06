@@ -177,7 +177,7 @@ class Journal extends Component {
               </div>
               <div className="contact-form-inner">
                 <label htmlFor="" />
-                {/* <button type="button" id="cancel" name="button" onClick={e => { this.handleCancel(e) }} className="button">취소</button> */}
+
                 <button
                   id="cancel"
                   type="button"

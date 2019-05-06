@@ -37,14 +37,17 @@ class CompanyDetail extends Component {
     };
 
     return (
-      <div>
-        <div className="narrow" style={style} />
+      <div className="content-mobile">
+        <div
+          className="narrow banner-mobile company-detail-mobile"
+          style={style}
+        />
         <div className="eventDetailWrapper">
-          <div className="detailContent">
+          <div className="detail-content">
             <h1>{name.ko}</h1>
             <h2>{name.en}</h2>
 
-            <div className="eventTable">
+            <div className="event-table ">
               <table>
                 <tbody>
                   <tr>

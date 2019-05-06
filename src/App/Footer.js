@@ -36,7 +36,7 @@ class Footer extends Component {
             <div className="footer-menu">
               <h1>SUBSCRIBE NOW</h1>
               <h2>
-                베스트 어메리카 뉴스레터 및 최신의 미국 컨퍼런스
+                베스트 아메리카 뉴스레터 및 최신의 미국 컨퍼런스
                 <br />
                 정보를 받아보세요!
               </h2>

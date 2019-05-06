@@ -56,18 +56,18 @@ class EventDetail extends Component {
         backgroundRepeat: "no-repeat",
         backgroundSize: "100% 100%",
         overflow: "hidden",
-        width: "100%",
+        width: "auto",
         marginTop: "40px"
       };
       return (
-        <div>
-          <div className="narrow" style={style} />
+        <div className="content-mobile">
+          <div className="narrow banner-mobile" style={style} />
           <div className="eventDetailWrapper">
-            <div className="detailContent">
+            <div className="detail-content">
               <h1>{eventName.ko}</h1>
               <h2>{eventName.en}</h2>
 
-              <div className="eventTable">
+              <div className="event-table">
                 <table>
                   <tbody>
                     <tr>

@@ -23,6 +23,9 @@ $black-2: #373a3c;
 $success: #28a745;
 $danger: #dc3545;
 
+*::-webkit-scrollbar {
+  width: 0 !important;
+}
 html {
   font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕",
     Roboto, Helvetica, Arial, sans-serif;
@@ -30,6 +33,7 @@ html {
   line-height: 1.5;
   font-weight: 400;
   color: $gray-3;
+  -webkit-overflow-scrolling: touch;
 }
 
 ul {
@@ -49,11 +53,17 @@ ul {
   // font-family: "Cairo", sans-serif;
   // font-size: 1.5rem;
   margin-top: 6px;
-  background: url("../image/bestamericaservices-logo-transparent.png");
+  background: url("../image/bestamericaservices-logo-transparent-url-color.png");
   background-size: 100%;
   background-repeat: no-repeat;
   width: 250px;
-  height: 20px;
+  height: 40px;
+}
+.hamburger {
+  display: none;
+}
+#mySidenav {
+  // display: none;
 }
 .contact {
   padding: 10px 32px;
@@ -69,7 +79,7 @@ ul {
   }
 }
 .nav-buttons {
-  margin: 0 20px;
+  margin: 4px 20px 0 20px;
 }
 .navbar {
   justify-content: space-between;
@@ -325,7 +335,7 @@ ul {
   margin-top: 40px;
   margin-bottom: 70px;
 }
-.detailContent {
+.detail-content {
   text-align: center;
   margin-top: 40px;
   h1 {
@@ -376,6 +386,7 @@ ul {
   // background-color: green;
   // justify-content: space-between;
   margin-top: 24px;
+  overflow-y: hidden;
 }
 .main-card {
   width: 250px;
@@ -385,6 +396,7 @@ ul {
   display: flex;
   flex-direction: column;
   margin-right: 20px;
+  margin-bottom: 20px;
 
   &:last-child {
     margin-right: 0;
@@ -414,7 +426,7 @@ ul {
 }
 #bottom {
   // flex-grow: 40;
-  height: 130px;
+  height: 120px;
   // background-color: $skyblue-1;
 }
 .message {
@@ -582,6 +594,7 @@ h2 {
   padding: 80px 0;
 
   p {
+    min-width: 300px;
     font-size: 35px;
     animation: fadein 2s;
   }
@@ -791,6 +804,52 @@ td:first-child {
   display: none;
 }
 
+// Side Navigation for smaller than screen width 500px;
+.sidenav {
+  height: 0;
+  width: 100%;
+  display: block;
+  // position: absolute;
+  // z-index: 2;
+  // top: 0;
+  // right: 0;
+  // background-color: #31353d;
+  background-color: $skyblue-3;
+  // overflow-x: hidden;
+  -webkit-transition: 0.3s;
+  transition-duration: 0.3s;
+  // padding-top: 60px;
+
+  .menu {
+    // min-width: 200px;
+    display: none;
+    opacity: 0;
+    animation: fadein-2 1.3s;
+  }
+}
+
+.sidenav a {
+  text-align: center;
+  padding: 8px;
+  text-decoration: none;
+  font-size: 20px;
+  color: $gray-7;
+  display: none;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #fff;
+}
+
+// .sidenav .closebtn {
+//   position: absolute;
+//   top: 0;
+//   right: 25px;
+//   font-size: 36px;
+//   margin-left: 50px;
+// }
+
 @keyframes fadein {
   from {
     opacity: 0;
@@ -801,8 +860,385 @@ td:first-child {
     transform: translate(0, 0);
   }
 }
+@keyframes fadein-2 {
+  from {
+    opacity: 0;
+    // transform: translate(-10px, -10px);
+  }
+  to {
+    opacity: 1;
+    // transform: translate(0, 0);
+  }
+}
 
-// @media only screen and (min-width: 768px){.show-on-mobile{display:none !important}}
+@media only screen and (max-width: 1100px) {
+  .narrow {
+    max-width: 810px;
+  }
+  .main-card-companies {
+    width: 255px;
+    a {
+      div {
+        height: 140px !important;
+      }
+    }
+  }
+  .info-text {
+    p {
+      font-size: 2em;
+    }
+  }
+  .info-picture {
+    margin: 80px 40px;
+  }
+  .info-card-languages,
+  .info-card-enterprise,
+  .info-card-conference {
+    height: 110px;
+  }
+  .info-card-desc {
+    h1 {
+      font-size: 1.3em;
+    }
+  }
+}
+@media only screen and (min-width: 851px) {
+  .main-card-companies:nth-child(3n + 0) {
+    margin-right: 0px;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .narrow {
+    max-width: 650px;
+  }
+  .main-card {
+    margin: 20px 35px;
+  }
+  .about-page-content-1 {
+    height: 500px;
+  }
+  .about-page-content-2 {
+    height: 550px;
+  }
+  .info-cards-container .info-card {
+    height: 315px;
+  }
+  .info-text {
+    margin-left: 40px;
+    p {
+      font-size: 1.5em;
+    }
+  }
+
+  .info-picture {
+    margin: 80px 40px 80px 0;
+  }
+  .info-card-desc {
+    h1 {
+      font-size: 1.1em;
+    }
+    span {
+      font-size: 0.9em;
+    }
+  }
+
+  .info-card-languages,
+  .info-card-enterprise,
+  .info-card-conference {
+    height: 80px;
+  }
+  .main-card-companies {
+    &:nth-child(3n + 0) {
+      margin-right: 20px;
+    }
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+
+    width: 315px;
+    a {
+      div {
+        height: 170px !important;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 690px) {
+  .search-bar {
+    display: none;
+  }
+  .main-banner-1 {
+    height: 250px;
+    background-size: auto 250px;
+  }
+  .narrow {
+    max-width: 605px;
+    margin: 0 25px;
+  }
+  .main-card {
+    // margin: 20px 25px;
+    margin: 0 20px 0 0;
+    width: 285px;
+    height: 260px;
+
+    a {
+      #top {
+        height: 150px !important;
+        background-size: 75% !important;
+      }
+    }
+  }
+  .conf-desc {
+    height: 75%;
+  }
+  .main-card,
+  .main-card-companies {
+    scroll-snap-align: start;
+  }
+  .main-card-container {
+    scroll-snap-type: mandatory;
+    scroll-snap-points-x: repeat(300px);
+    scroll-snap-type: x mandatory;
+    display: -webkit-box;
+    overflow-x: scroll;
+    margin-top: 15px !important;
+    height: 285px;
+  }
+  .space-top-bottom {
+    margin-top: 25px;
+    margin-bottom: 40px;
+  }
+  .main-card-companies {
+    width: 285px;
+    a {
+      div {
+        height: 160px !important;
+      }
+    }
+    &:nth-child(3n + 0) {
+      margin-right: 20px;
+    }
+    &:nth-child(2n) {
+      margin-right: 20px;
+    }
+  }
+  .info-cards-container {
+    flex-direction: column;
+  }
+  .info-card {
+    margin: 0 auto 40px auto !important;
+  }
+  .info-card-languages,
+  .info-card-enterprise,
+  .info-card-conference {
+    height: 200px;
+  }
+
+  .info-card-desc {
+    text-align: center;
+    width: 80%;
+    margin: auto auto 30px auto !important;
+
+    h1 {
+      font-size: 2em;
+    }
+    span {
+      font-size: 1em;
+    }
+  }
+  .about-page-content-2 {
+    height: auto;
+  }
+  .info-cards-container .info-card {
+    height: auto;
+    // margin: 0 20px 40px 20px !important;
+  }
+  .info-card-desc {
+    margin: 20px 10px 30px 10px;
+  }
+  .content-mobile {
+    margin: 20px 35px;
+  }
+  .banner-mobile {
+    margin: 0 auto !important;
+    height: 250px !important;
+    width: auto !important;
+    // background-size: auto !important;
+  }
+}
+@media only screen and (max-width: 615px) {
+  .info-cards-wrapper {
+    margin: auto;
+    h1 {
+      font-size: 1.8em;
+    }
+  }
+  .info-text {
+    width: 200px;
+    p {
+      font-size: 1.2em;
+    }
+  }
+  .info-picture {
+    margin-top: 55px;
+  }
+
+  .contact-form-inner {
+    flex-direction: column;
+    &:last-child {
+      flex-direction: row;
+      label {
+        display: none;
+      }
+    }
+  }
+  .contact-image {
+    margin-top: 30px;
+  }
+  .contact-wrapper {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 30px;
+  }
+  .contact-form {
+    label {
+      font-size: 1.2em;
+    }
+    input {
+      padding: 5px 10px;
+    }
+  }
+}
+@media only screen and (max-width: 500px) {
+  .search-bar,
+  .nav-buttons,
+  header {
+    display: none;
+  }
+  .narrow {
+    max-width: 300px;
+    margin: auto;
+    // margin-bottom: 15px;
+  }
+  .main-banner-1 {
+    height: 195px;
+    background-position: 47% 50%;
+    background-size: auto 195px;
+  }
+  .space-top-bottom {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+  h2 {
+    margin-bottom: 15px;
+  }
+  .chart {
+    ul {
+      li {
+        margin-right: 30px;
+      }
+    }
+  }
+
+  .main-card-companies {
+    height: 205px;
+    width: 300px;
+  }
+  .main-card {
+    margin-right: 25px !important;
+    width: 300px;
+  }
+  .name {
+    li {
+      margin-top: 0;
+      padding: 10px 0;
+    }
+  }
+  .footer-wrapper {
+    padding-left: 30px;
+  }
+  .footer-content {
+    display: contents;
+  }
+  .footer-copyright {
+    font-size: 10px;
+  }
+  .hamburger {
+    display: block !important;
+    padding: 0;
+    right: 30px;
+    top: 35px;
+    position: absolute;
+  }
+  .hamburger-box {
+    // height: 15px;
+  }
+  .hamburger-inner {
+    // width: 30px;
+  }
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after {
+    width: 30px;
+  }
+  .info-text-wrapper {
+    flex-direction: column-reverse;
+  }
+  .info-picture {
+    width: 100%;
+    margin: auto;
+    height: 200px;
+  }
+  .info-text {
+    padding: 0;
+    margin: auto;
+  }
+  .about-page-content-1 {
+    height: 400px;
+  }
+  .info-cards-wrapper {
+    h1 {
+      font-size: 1.2em;
+    }
+    padding: 30px 0 0 0 !important;
+  }
+  .info-text-wrapper {
+    padding: 20px 0;
+  }
+  .info-card-languages,
+  .info-card-enterprise,
+  .info-card-conference {
+    height: 120px;
+  }
+  .content-mobile {
+    margin: 20px 35px;
+  }
+  .banner-mobile {
+    margin: 0 !important;
+    background-size: 100% !important;
+    max-width: unset;
+    height: 150px !important;
+  }
+  .company-detail-mobile {
+    margin: auto !important;
+    max-width: 65%;
+  }
+  .detail-content {
+    h1 {
+      font-size: 1.5em;
+    }
+    h2 {
+      font-size: 1.3em;
+    }
+  }
+  .event-table {
+    font-size: 0.9em;
+  }
+  td:first-child {
+    width: 95px;
+  }
+}
+
 // @media only screen and (min-width: 1024px){.show-on-tablet{display:none !important}}
 // @media only screen and (min-width: 1440px){.show-on-desktop{display:none !important}}
 // @media only screen and (min-width: 641px){.show-event-on-mobile{display:none !important}}

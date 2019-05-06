@@ -566,7 +566,7 @@ A‌i‌r‌b‌n‌b‌,‌ ‌I‌n‌c‌.‌, headquartered in San Francisco
     plugandplay: {
       type: "company",
       name: {
-        en: "Plug and Play Tech Center",
+        en: "Plug and Play",
         ko: "플러그앤플레이"
       },
       industry:
