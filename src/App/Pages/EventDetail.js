@@ -62,7 +62,7 @@ class EventDetail extends Component {
       return (
         <div className="content-mobile">
           <div className="narrow banner-mobile" style={style} />
-          <div className="eventDetailWrapper">
+          <div className="event-detail-wrapper narrow">
             <div className="detail-content">
               <h1>{eventName.ko}</h1>
               <h2>{eventName.en}</h2>

@@ -47,7 +47,7 @@ class CompanyDetail extends Component {
             <h1>{name.ko}</h1>
             <h2>{name.en}</h2>
 
-            <div className="event-table">
+            <div className="event-table table-grid-mobile-univ">
               <table>
                 <tbody>
                   <tr>

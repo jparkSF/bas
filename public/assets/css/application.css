@@ -901,7 +901,9 @@ tr {
 }
 
 td:first-child {
-  width: 150px;
+  width: 15%;
+  max-width: 170px;
+  min-width: 50px;
 }
 
 .border-white {
@@ -1338,7 +1340,13 @@ td:first-child {
     font-size: 0.9em;
   }
   td:first-child {
-    width: 95px;
+    width: auto;
+  }
+  .table-grid-mobile-univ td:first-child {
+    width: 55px;
+  }
+  .event-detail-wrapper {
+    max-width: unset !important;
   }
 }
 /*# sourceMappingURL=application.css.map */

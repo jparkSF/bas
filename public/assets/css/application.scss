@@ -787,7 +787,9 @@ tr {
   color: $black-2;
 }
 td:first-child {
-  width: 150px;
+  width: 15%;
+  max-width: 170px;
+  min-width: 50px;
 }
 
 .border-white {
@@ -840,6 +842,12 @@ td:first-child {
 
 .sidenav a:hover {
   color: #fff;
+}
+
+.card-button {
+  // border-radius: 7px;
+  // box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  // box-shadow: inset 0 0 3px #000000;
 }
 
 // .sidenav .closebtn {
@@ -1065,6 +1073,9 @@ td:first-child {
     width: auto !important;
     // background-size: auto !important;
   }
+  .detail-content {
+    // margin: 0 40px;
+  }
 }
 @media only screen and (max-width: 615px) {
   .info-cards-wrapper {
@@ -1235,7 +1246,20 @@ td:first-child {
     font-size: 0.9em;
   }
   td:first-child {
-    width: 95px;
+    // min-width: 65px;
+    width: auto;
+  }
+
+  td:last-child {
+    // width: auto !important;
+  }
+  .table-grid-mobile-univ {
+    td:first-child {
+      width: 55px;
+    }
+  }
+  .event-detail-wrapper {
+    max-width: unset !important;
   }
 }
 

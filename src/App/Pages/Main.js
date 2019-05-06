@@ -88,7 +88,7 @@ class Main extends Component {
           let parsedEventName = event.eventName.en.split(" ").join("-");
 
           return (
-            <div key={idx} className="main-card">
+            <div key={idx} className="main-card card-button">
               <Link
                 to={{
                   pathname: `event/${parsedEventName}`,
@@ -151,7 +151,7 @@ class Main extends Component {
           };
 
           return (
-            <div key={com} className="main-card-companies">
+            <div key={com} className="main-card-companies card-button">
               <Link
                 to={{
                   pathname: `/company-info/${com}`,
@@ -180,7 +180,7 @@ class Main extends Component {
     let shuffledColleges = this.shuffle(Object.keys(colleges));
     const numberOfColleges = 3;
     return (
-      <div className="main-card-container narrow">
+      <div className="main-card-container narrow card-button">
         {shuffledColleges.slice(0, numberOfColleges).map(coll => {
           let imageUrl = colleges[coll].images.thumbnail;
           let style = {
