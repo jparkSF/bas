@@ -564,7 +564,7 @@ ul {
   margin-top: 15px;
 }
 
-.footer-subscription input[type="text"] {
+.footer-subscription input[type="email"] {
   background-color: white;
   padding: 12px 10px;
   margin-right: 10px;
@@ -573,7 +573,7 @@ ul {
   height: 10px;
 }
 
-.footer-subscription input[type="button"] {
+.footer-subscription input[type="submit"] {
   border: 1px solid white;
   padding: 9px 15px;
   font-size: 0.7em;
@@ -952,6 +952,14 @@ td:first-child {
 
 .sidenav a:hover {
   color: #fff;
+}
+
+/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+  	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+#mc_embed_signup {
+  background: #fff;
+  clear: left;
+  font: 14px Helvetica, Arial, sans-serif;
 }
 
 @-webkit-keyframes fadein {

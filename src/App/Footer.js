@@ -1,6 +1,21 @@
 import React, { Component } from "react";
 
 class Footer extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      email: ""
+    };
+  }
+  targetPopup(form) {
+    // window.open("", "formpopup", "width=400,height=400,resizeable,scrollbars");
+    // form.target = "formpopup";
+  }
+  handleChange(e) {
+    console.log(this.state.email);
+    this.setState({ email: e.target.value });
+  }
   footer() {
     return (
       <div className="">
@@ -25,7 +40,7 @@ class Footer extends Component {
                 <a href="/">
                   <i className="fab fa-instagram" />
                 </a>
-                <a href="mailto: jpark830@me.com">
+                <a href="mailto: jpark@siliconvalleytour.info">
                   <i className="far fa-envelope" />
                 </a>
               </div>
@@ -40,9 +55,24 @@ class Footer extends Component {
                 <br />
                 정보를 받아보세요!
               </h2>
+
               <div className="footer-subscription">
-                <input type="text" placeholder="이메일주소를 입렵하세요.." />
-                <input type="button" value="SEND" />
+                <form
+                  action="https://me.us20.list-manage.com/subscribe/post?u=63acc2fb2b97ce7b1af230f2e&amp;id=f809f1b884"
+                  method="post"
+                  onSubmit={e => this.targetPopup(this)}
+                  className="validate"
+                >
+                  <input
+                    placeholder="이메일주소를 입렵하세요.."
+                    type="email"
+                    name="EMAIL"
+                    className="required email"
+                    id="mce-EMAIL"
+                    onChange={e => this.handleChange(e)}
+                  />
+                  <input type="submit" value="SEND" />
+                </form>
               </div>
             </div>
           </div>

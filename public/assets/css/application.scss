@@ -506,7 +506,7 @@ ul {
   position: relative;
   margin-top: 15px;
 
-  input[type="text"] {
+  input[type="email"] {
     background-color: white;
     padding: 12px 10px;
     margin-right: 10px;
@@ -515,7 +515,7 @@ ul {
     height: 10px;
   }
 
-  input[type="button"] {
+  input[type="submit"] {
     border: 1px solid white;
     // height: 0;
     padding: 9px 15px;
@@ -857,6 +857,14 @@ td:first-child {
 //   font-size: 36px;
 //   margin-left: 50px;
 // }
+
+/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+  	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+#mc_embed_signup {
+  background: #fff;
+  clear: left;
+  font: 14px Helvetica, Arial, sans-serif;
+}
 
 @keyframes fadein {
   from {
