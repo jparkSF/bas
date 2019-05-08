@@ -37,7 +37,7 @@ class Footer extends Component {
             <div className="footer-menu">
               <h1>LET'S CONNECT</h1>
               <div className="footer-fontawesome">
-                <a href="/">
+                <a href="https://www.instagram.com/bestamericaservices/">
                   <i className="fab fa-instagram" />
                 </a>
                 <a href="mailto: jpark@siliconvalleytour.info">
