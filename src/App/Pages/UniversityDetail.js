@@ -42,7 +42,7 @@ class CompanyDetail extends Component {
           className="narrow banner-mobile company-detail-mobile"
           style={style}
         />
-        <div className="eventDetailWrapper">
+        <div className="event-detail-wrapper narrow">
           <div className="detail-content">
             <h1>{name.ko}</h1>
             <h2>{name.en}</h2>

@@ -47,7 +47,8 @@ class Nav extends Component {
     let keyword = this.state.search;
     let allEvents = this.state.allEvents;
     let filteredList = [];
-
+    console.log(allEvents);
+    console.log(keyword);
     if (keyword.length !== 0) {
       allEvents.forEach(e => {
         let included = e[0].toLowerCase().indexOf(keyword);

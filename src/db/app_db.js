@@ -461,7 +461,7 @@ export default {
       location: {
         en: {
           name: "Moscone Convention Center",
-          address: "747 Howard St.",
+          address: "730 Howard St.",
           city: "San Francisco",
           state: "CA",
           zip: "94103"
@@ -492,6 +492,311 @@ export default {
         other: []
       },
       website: "http://www.semiconwest.org/"
+    },
+    "2019-06-03_1": {
+      eventName: {
+        ko: "전자 보안 박람회",
+        en: "ELECTRONIC SECURITY EXPO 2019"
+      },
+      date: {
+        start: "2019-06-03",
+        end: "2019-06-06"
+      },
+      location: {
+        en: {
+          name: "Indiana Convention Center",
+          address: "100 S Capitol Ave.",
+          city: "Indianapolis",
+          state: "IN",
+          zip: "46225"
+        },
+        ko: {
+          name: "인디아나 컨벤션 센터",
+          city: "인디아나폴리스"
+        }
+      },
+      description: "전자부품, 반도체, 보안기술",
+      exhibitor: "2,500",
+      expectedVisitor: "10,000",
+      exhibition: [
+        "Marketing & Communications/Insurance",
+        "Education/Legal Affairs/Technology",
+        "Government Relations/PSLC/Standards/Video"
+      ],
+      images: {
+        thumbnail: "/assets/image/event-images/esx-2019.jpg",
+        banner:
+          "https://www.eiseverywhere.com/file_uploads/3c12da03dbd5571efb05838ec05bec80_ESX_2019_Banner.png",
+        other: []
+      },
+      website: "https://www.esxweb.com/"
+    },
+    "2019-07-10": {
+      eventName: {
+        ko: "사이버 보안 박람회",
+        en: "CYBER SECURITY SUMMIT 2019"
+      },
+      date: {
+        start: "2019-07-10",
+        end: "2019-07-12"
+      },
+      location: {
+        en: {
+          name: "Gurney's Newport Resort & Marina",
+          address: "1 Goat Island",
+          city: "Newport",
+          state: "RI",
+          zip: "02840"
+        },
+        ko: {
+          name: "거니스 뉴포트 리조트",
+          city: "뉴포트"
+        }
+      },
+      description: "",
+      exhibitor: "3,000",
+      expectedVisitor: "10,000",
+      exhibition: [
+        "Investing in Cyber Security",
+        "Machine Learning & AI",
+        "Governance, Risk & Compliance",
+        "Application Security & DevOps",
+        "Phishing",
+        "Mobile & IoT Security",
+        "Hackers & Threats"
+      ],
+      images: {
+        thumbnail: "/assets/image/event-images/cyber-security-summit-2019.png",
+        banner:
+          "https://events.opalgroup.net/file_uploads/2087acecab54510e374b2096547a25c7_css_etouches_900x400.jpg",
+        other: []
+      },
+      website: "https://opalgroup.net/conference/cyber-security-summit-2019/"
+    },
+    "2019-08-20": {
+      eventName: {
+        ko: "애완용품 박람회",
+        en: "SUPERZOO 2019"
+      },
+      date: {
+        start: "2019-08-20",
+        end: "2019-08-22"
+      },
+      location: {
+        en: {
+          name: "Mandalay Bay Convention Center",
+          address: "3950 S Las Vegas Blvd.",
+          city: "Lav Vegas",
+          state: "NV",
+          zip: "89119"
+        },
+        ko: {
+          name: "만달레 베이 컨벤션 센터",
+          city: "라스베가스"
+        }
+      },
+      description: "",
+      exhibitor: "1,086",
+      expectedVisitor: "10,057",
+      exhibition: [
+        "Aquatic / Pond Products",
+        "Aquatic Foods",
+        "Bird Food & Treats",
+        "Cat Food & Treats",
+        "Grooming Products",
+        "Natural Food & Treats",
+        "Other Products for Service Providers",
+        "POS / Store Equipment",
+        "Reptile Food & Treats",
+        "Reptile Products",
+        "Small Animal Food & Treats",
+        "Small Animal Products",
+        "Training Products"
+      ],
+      images: {
+        thumbnail: "/assets/image/event-images/superzoo-2019.jpg",
+        banner:
+          "https://superzoo.org/wp-content/uploads/2019/04/pet-products-banner.jpg",
+        other: []
+      },
+      website: "https://superzoo.org/"
+    },
+    "2019-09-25": {
+      eventName: {
+        ko: "AI 서밋",
+        en: "THE AI SUMMIT SF 2019"
+      },
+      date: {
+        start: "2019-09-25",
+        end: "2019-09-26"
+      },
+      location: {
+        en: {
+          name: "The Palace of Fine Arts",
+          address: "3601 Lyon St",
+          city: "San Francisco",
+          state: "CA",
+          zip: "94123"
+        },
+        ko: {
+          name: "팔라스 오브 파인 아트",
+          city: "샌프란시스코"
+        }
+      },
+      description:
+        "AI Summit San Francisco는 기업 조직이 AI의 실용적 의의에 대해 생각하면서 업무의 생산성을 대폭 높이고 있는 실용적 솔루션에 초점을 맞추는 세계 최초의 대규모 컨퍼런스 및 전시회입니다",
+      exhibitor: "200",
+      expectedVisitor: "6,000",
+      exhibition: [
+        "Responsible and Ethical AI",
+        "Building Stronger Customer Relationships",
+        "Machine Learning and Analytics",
+        "Building a Data Team of Talent",
+        "From Concept to Reality",
+        "Procurement Considerations",
+        "Perception(Vision and Language) AI",
+        "AI Development"
+      ],
+      images: {
+        thumbnail: "/assets/image/event-images/ai-summit-sf-2019.png",
+        banner: "/assets/image/event-images/ai-summit-sf-2019-banner.png",
+        other: []
+      },
+      website: "https://theaisummit.com/"
+    },
+    "2019-08-25": {
+      eventName: {
+        ko: "VM 월드",
+        en: "VM WORLD 2019"
+      },
+      date: {
+        start: "2019-08-25",
+        end: "2019-08-29"
+      },
+      location: {
+        en: {
+          name: "Moscone Center North, South, and West",
+          address: "730 Howard st.",
+          city: "San Francisco",
+          state: "CA",
+          zip: "94103"
+        },
+        ko: {
+          name: "모스콘센터",
+          city: "샌프란시스코"
+        }
+      },
+      description: "",
+      exhibitor: "230",
+      expectedVisitor: "21,000",
+      exhibition: [
+        "Hybrid Cloud",
+        "Multi - Cloud",
+        "Modern Apps",
+        "Networking & Security",
+        "Digital Workspace",
+        "Emerging Trends",
+        "IoT and Edge",
+        "Unified Endpoint Management",
+        "Cloud Networking"
+      ],
+      images: {
+        thumbnail: "/assets/image/event-images/vm-world-2019.png",
+        banner: "/assets/image/event-images/vm-world-2019-banner.png",
+        other: []
+      },
+      website: "https://www.vmworld.com/en/us/index.html#"
+    },
+    "2019-09-16": {
+      eventName: {
+        ko: "오라클 오픈월드",
+        en: "ORACLE OPEN WORLD 2019"
+      },
+      date: {
+        start: "2019-09-16",
+        end: "2019-09-19"
+      },
+      location: {
+        en: {
+          name: "Moscone Center North, South, and West",
+          address: "730 Howard st.",
+          city: "San Francisco",
+          state: "CA",
+          zip: "94103"
+        },
+        ko: {
+          name: "모스콘센터",
+          city: "샌프란시스코"
+        }
+      },
+      description: "",
+      exhibitor: "500",
+      expectedVisitor: "60,000",
+      exhibition: [
+        "Systems Integrations",
+        "Business Transformation",
+        "Multisolution Customer Experience(CX) cloud and SaaS solutions and integrations",
+        "Time and attendance, workforce management, HR data collection, and employee self-service ",
+        "labor management solutions",
+        "real-time data integration",
+        "data management software solutions"
+      ],
+      images: {
+        thumbnail: "https://pbs.twimg.com/media/D4iJo-VXoAAWlFf.jpg",
+        banner:
+          "https://www.ensah.nl/wp-content/uploads/2018/12/OracleOpenWorld2019.png",
+        other: []
+      },
+      website: "https://www.oracle.com/openworld/"
+    },
+    "2019-10-02": {
+      eventName: {
+        ko: "디스럽트 SF",
+        en: "DISRUPT SF 2019"
+      },
+      date: {
+        start: "2019-10-02",
+        end: "2019-10-04"
+      },
+      location: {
+        en: {
+          name: "Moscone Center North, South, and West",
+          address: "730 Howard st.",
+          city: "San Francisco",
+          state: "CA",
+          zip: "94103"
+        },
+        ko: {
+          name: "모스콘센터",
+          city: "샌프란시스코"
+        }
+      },
+      description: "",
+      exhibitor: "400",
+      expectedVisitor: "10,000",
+      exhibition: [
+        "Artificial Intelligence/Machine Learning",
+        "BioTech / HealthTech",
+        "Blockchain",
+        "FinTech",
+        "Gaming",
+        "Investor Topics",
+        "Media",
+        "Mobility",
+        "Privacy / Security,",
+        "Retail / eCommerce",
+        "Robotics / IoT / Hardware",
+        "SaaS",
+        "Space",
+        "Social Impact & Education"
+      ],
+      images: {
+        thumbnail:
+          "https://techcrunch.com/wp-content/uploads/2018/08/Disrupt-SF-19-466X269.png?w=466",
+        banner: "/assets/image/event-images/tc-2019-banner.png",
+        other: []
+      },
+      website: "https://techcrunch.com/events/disrupt-sf-2019/"
     }
   },
   companies: {
