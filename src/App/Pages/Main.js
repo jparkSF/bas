@@ -72,7 +72,10 @@ class Main extends Component {
     });
 
     return (
-      <div className="main-card-container narrow">
+      <div
+        className="main-card-container narrow"
+        onScroll={() => this.handleScroll()}
+      >
         {sortedEventsInMonth.map((event, idx) => {
           let imageUrl = event.images.thumbnail;
           let style = {
@@ -249,6 +252,13 @@ class Main extends Component {
         </div>
       </div>
     );
+  }
+
+  handleScroll() {
+    let position = window.$(".main-card-container").scrollLeft();
+    const offset = window.$(".main-card").outerWidth(true);
+    let page = position / offset;
+    console.log(parseInt(page));
   }
   render() {
     // window.onclick = function(event) {
