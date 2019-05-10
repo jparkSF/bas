@@ -9,7 +9,10 @@ class Main extends Component {
     this.state = {
       selectedMonth: 0,
       upcomingMonths: [],
-      db
+      db,
+      event: 0,
+      univ: 0,
+      com: 0
     };
   }
 
@@ -72,59 +75,74 @@ class Main extends Component {
     });
 
     return (
-      <div
-        className="main-card-container narrow"
-        onScroll={() => this.handleScroll()}
-      >
-        {sortedEventsInMonth.map((event, idx) => {
-          let imageUrl = event.images.thumbnail;
-          let style = {
-            height: 170,
-            backgroundImage: `url(${imageUrl})`,
-            backgroundPosition: "50% 50%",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "100% auto",
-            overflow: "hidden",
-            boxShadow: "inset 0 0 0 1px rgba(0, 0, 0, 0.16)"
-          };
+      <div>
+        <div
+          id="event-list"
+          className="main-card-container narrow"
+          onScroll={() => this.handleScroll("event")}
+        >
+          {sortedEventsInMonth.map((event, idx) => {
+            let imageUrl = event.images.thumbnail;
+            let style = {
+              height: 170,
+              backgroundImage: `url(${imageUrl})`,
+              backgroundPosition: "50% 50%",
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "100% auto",
+              overflow: "hidden",
+              boxShadow: "inset 0 0 0 1px rgba(0, 0, 0, 0.16)"
+            };
 
-          let parsedEventName = event.eventName.en.split(" ").join("-");
+            let parsedEventName = event.eventName.en.split(" ").join("-");
 
-          return (
-            <div key={idx} className="main-card card-button">
-              <Link
-                to={{
-                  pathname: `event/${parsedEventName}`,
-                  state: {
-                    event: event
-                  }
-                }}
-              >
-                <div id="top" style={style} />
-                <div id="bottom">
-                  <div className="conf-desc">
-                    <div id="location">
-                      {event.location.ko.city}&nbsp;•&nbsp;
-                      {event.location.en.city}
-                    </div>
-                    <div id="name">
-                      <span id="eventName">
-                        {event.eventName.ko}
-                        <br />
-                        {event.eventName.en}
-                      </span>
-                    </div>
-                    <div id="date">
-                      {event.date.start.replace(/-/g, "/")}
-                      &nbsp;~&nbsp;
-                      {event.date.end.replace(/-/g, "/")}
+            return (
+              <div key={idx} className="main-card card-button">
+                <Link
+                  to={{
+                    pathname: `event/${parsedEventName}`,
+                    state: {
+                      event: event
+                    }
+                  }}
+                >
+                  <div id="top" style={style} />
+                  <div id="bottom">
+                    <div className="conf-desc">
+                      <div id="location">
+                        {event.location.ko.city}&nbsp;•&nbsp;
+                        {event.location.en.city}
+                      </div>
+                      <div id="name">
+                        <span id="eventName">
+                          {event.eventName.ko}
+                          <br />
+                          {event.eventName.en}
+                        </span>
+                      </div>
+                      <div id="date">
+                        {event.date.start.replace(/-/g, "/")}
+                        &nbsp;~&nbsp;
+                        {event.date.end.replace(/-/g, "/")}
+                      </div>
                     </div>
                   </div>
-                </div>
-              </Link>
-            </div>
-          );
-        })}
+                </Link>
+              </div>
+            );
+          })}
+        </div>
+        <div className="dotnav dotstyle dotstyle-scaleup">
+          <ul className="dotnav">
+            {Array.from("x".repeat(eventsInMonth.length)).map((v, i) => {
+              let currentPosition = this.state.event;
+              return (
+                <li key={i} className={currentPosition === i ? "current" : ""}>
+                  <button>{i}</button>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       </div>
     );
   }
@@ -138,43 +156,69 @@ class Main extends Component {
     let companies = this.state.db.companies;
     let shuffledCompanies = this.shuffle(Object.keys(companies));
     const numberOfCompanies = 9;
-    return (
-      <div className="main-card-container narrow">
-        {shuffledCompanies.slice(0, numberOfCompanies).map(com => {
-          let imageUrl = companies[com].images.thumbnail;
-          let style = {
-            height: 170,
-            backgroundImage: `url(${imageUrl})`,
-            backgroundPosition: "50% 50%",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "100% auto",
-            overflow: "hidden",
-            // boxShadow: "0 0 0 1px rgba(0, 0, 0, 0.16)",
-            border: "1px solid #dee2e6"
-          };
+    let companyLength = shuffledCompanies.length;
 
-          return (
-            <div key={com} className="main-card-companies card-button">
-              <Link
-                to={{
-                  pathname: `/company-info/${com}`,
-                  state: { company: companies[com] }
-                }}
-              >
-                <div style={style} />
-              </Link>
-              <div>
-                <div className="conf-desc com-desc block">
-                  {/* <div id="location">&nbsp;•&nbsp;</div> */}
-                  <div id="name">
-                    <span>{companies[com].name.ko}&nbsp;•&nbsp;</span>
+    return (
+      <div>
+        <div
+          id="com-list"
+          className="main-card-container narrow"
+          onScroll={() => this.handleScroll("com")}
+        >
+          {shuffledCompanies.slice(0, numberOfCompanies).map(com => {
+            let imageUrl = companies[com].images.thumbnail;
+            let style = {
+              height: 170,
+              backgroundImage: `url(${imageUrl})`,
+              backgroundPosition: "50% 50%",
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "100% auto",
+              overflow: "hidden",
+              // boxShadow: "0 0 0 1px rgba(0, 0, 0, 0.16)",
+              border: "1px solid #dee2e6"
+            };
+
+            return (
+              <div key={com} className="main-card-companies card-button">
+                <Link
+                  to={{
+                    pathname: `/company-info/${com}`,
+                    state: { company: companies[com] }
+                  }}
+                >
+                  <div style={style} />
+                </Link>
+                <div>
+                  <div className="conf-desc com-desc block">
+                    {/* <div id="location">&nbsp;•&nbsp;</div> */}
+                    <div id="name">
+                      <span>{companies[com].name.ko}&nbsp;•&nbsp;</span>
+                    </div>
+                    <div id="date">{companies[com].name.en}</div>
                   </div>
-                  <div id="date">{companies[com].name.en}</div>
                 </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+          <div id="slider-page--com" />
+        </div>
+        <div className="dotnav dotstyle dotstyle-scaleup">
+          <ul className="dotnav">
+            {Array.from("x".repeat(companyLength)).map((v, i) => {
+              let currentPosition = this.state.com;
+              return (
+                <li
+                  key={i}
+                  className={`dot-spacing ${
+                    currentPosition === i ? "current" : ""
+                  }`}
+                >
+                  <button>{i}</button>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       </div>
     );
   }
@@ -183,42 +227,65 @@ class Main extends Component {
     let shuffledColleges = this.shuffle(Object.keys(colleges));
     const numberOfColleges = 3;
     return (
-      <div className="main-card-container narrow card-button">
-        {shuffledColleges.slice(0, numberOfColleges).map(coll => {
-          let imageUrl = colleges[coll].images.thumbnail;
-          let style = {
-            height: 170,
-            backgroundImage: `url(${imageUrl})`,
-            backgroundPosition: "50% 50%",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "100% auto",
-            overflow: "hidden",
-            // boxShadow: "0 0 0 1px rgba(0, 0, 0, 0.16)",
-            border: "1px solid #dee2e6"
-          };
+      <div>
+        <div
+          id="univ-list"
+          className="main-card-container narrow"
+          onScroll={() => this.handleScroll("univ")}
+        >
+          {shuffledColleges.slice(0, numberOfColleges).map(coll => {
+            let imageUrl = colleges[coll].images.thumbnail;
+            let style = {
+              height: 170,
+              backgroundImage: `url(${imageUrl})`,
+              backgroundPosition: "50% 50%",
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "100% auto",
+              overflow: "hidden",
+              // boxShadow: "0 0 0 1px rgba(0, 0, 0, 0.16)",
+              border: "1px solid #dee2e6"
+            };
 
-          return (
-            <div key={coll} className="main-card-companies">
-              <Link
-                to={{
-                  pathname: `/university/${coll}`,
-                  state: { colleges: colleges[coll] }
-                }}
-              >
-                <div style={style} />
-              </Link>
-              <div>
-                <div className="conf-desc com-desc block">
-                  {/* <div id="location">&nbsp;•&nbsp;</div> */}
-                  <div id="name">
-                    <span>{colleges[coll].name.ko}&nbsp;•&nbsp;</span>
+            return (
+              <div key={coll} className="main-card-companies card-button">
+                <Link
+                  to={{
+                    pathname: `/university/${coll}`,
+                    state: { colleges: colleges[coll] }
+                  }}
+                >
+                  <div style={style} />
+                </Link>
+                <div>
+                  <div className="conf-desc com-desc block">
+                    {/* <div id="location">&nbsp;•&nbsp;</div> */}
+                    <div id="name">
+                      <span>{colleges[coll].name.ko}&nbsp;•&nbsp;</span>
+                    </div>
+                    <div id="date">{colleges[coll].name.en}</div>
                   </div>
-                  <div id="date">{colleges[coll].name.en}</div>
                 </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
+        <div className="dotnav dotstyle dotstyle-scaleup">
+          <ul className="dotnav">
+            {Array.from("x".repeat(numberOfColleges)).map((v, i) => {
+              let currentPosition = this.state.univ;
+              return (
+                <li
+                  key={i}
+                  className={`dot-spacing ${
+                    currentPosition === i ? "current" : ""
+                  }`}
+                >
+                  <button>{i}</button>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       </div>
     );
   }
@@ -254,11 +321,16 @@ class Main extends Component {
     );
   }
 
-  handleScroll() {
-    let position = window.$(".main-card-container").scrollLeft();
-    const offset = window.$(".main-card").outerWidth(true);
+  handleScroll(type) {
+    let position = window.$(`#${type}-list`).scrollLeft();
+    const offset = window.$(".card-button").outerWidth(true);
+
     let page = position / offset;
-    console.log(parseInt(page));
+
+    window.$(`#slider-page--${type}`).append(`<span>${page}</span>`);
+    if (page % 1 === 0) {
+      this.setState({ [type]: page });
+    }
   }
   render() {
     // window.onclick = function(event) {

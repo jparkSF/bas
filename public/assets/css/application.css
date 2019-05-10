@@ -954,6 +954,15 @@ td:first-child {
   color: #fff;
 }
 
+.dotstyle {
+  display: none;
+}
+
+#com-list,
+#univ-list {
+  height: 210px;
+}
+
 /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
   	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
 #mc_embed_signup {
@@ -1139,10 +1148,10 @@ td:first-child {
     height: 160px !important;
   }
   .main-card-companies:nth-child(3n + 0) {
-    margin-right: 20px;
+    margin-right: 25px;
   }
   .main-card-companies:nth-child(2n) {
-    margin-right: 20px;
+    margin-right: 25px;
   }
   .info-cards-container {
     -webkit-box-orient: vertical;
@@ -1252,7 +1261,7 @@ td:first-child {
   }
   .space-top-bottom {
     margin-top: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
   }
   h2 {
     margin-bottom: 15px;
@@ -1263,6 +1272,7 @@ td:first-child {
   .main-card-companies {
     height: 205px;
     width: 300px;
+    margin-right: 25px;
   }
   .main-card {
     margin-right: 25px !important;
@@ -1355,6 +1365,14 @@ td:first-child {
   }
   .event-detail-wrapper {
     max-width: unset !important;
+  }
+  .dotstyle {
+    display: inherit;
+  }
+  .dot-spacing {
+    margin: 0 4px !important;
+    width: 5px !important;
+    height: 5px !important;
   }
 }
 /*# sourceMappingURL=application.css.map */
