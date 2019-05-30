@@ -958,11 +958,6 @@ td:first-child {
   display: none;
 }
 
-#com-list,
-#univ-list {
-  height: 210px;
-}
-
 /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
   	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
 #mc_embed_signup {
@@ -1195,6 +1190,10 @@ td:first-child {
     height: 250px !important;
     width: auto !important;
   }
+  #com-list,
+  #univ-list {
+    height: 210px;
+  }
 }
 
 @media only screen and (max-width: 615px) {
@@ -1277,6 +1276,10 @@ td:first-child {
   .main-card {
     margin-right: 25px !important;
     width: 300px;
+  }
+  .main-card-container::-webkit-scrollbar-track {
+    display: none;
+    background-color: transparent;
   }
   .name li {
     margin-top: 0;

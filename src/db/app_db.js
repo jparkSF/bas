@@ -573,6 +573,46 @@ export default {
       },
       website: "https://opalgroup.net/conference/cyber-security-summit-2019/"
     },
+    "2019-07-28": {
+      eventName: {
+        ko: "화장,미용용품 박람회",
+        en: "COSMOPROF NORTH AMERICA 2019"
+      },
+      date: {
+        start: "2019-07-28",
+        end: "2019-07-30"
+      },
+      location: {
+        en: {
+          name: "Mandalay Bay Convention Center",
+          address: "3950 S Las Vegas Blvd.",
+          city: "Las Vegas",
+          state: "NV",
+          zip: "89119"
+        },
+        ko: {
+          name: "만달레이 베이 컨벤션 센터",
+          city: "라스베가스"
+        }
+      },
+      description: "",
+      exhibitor: "1,415",
+      expectedVisitor: "40,000",
+      exhibition: [
+        "Cosmetics Personal Care",
+        "Cosmetics skincare",
+        "raw materials of machinery, formulatio to packaing, private label, business tools and POS system",
+
+        "Packaging, contract private label",
+        "Professional beauty section"
+      ],
+      images: {
+        thumbnail: "/assets/image/event-images/cosmoprof-2019.png",
+        banner: "https://cosmoprofnorthamerica.com/img/CPNA-banner-2019.jpg",
+        other: []
+      },
+      website: "https://cosmoprofnorthamerica.com/"
+    },
     "2019-08-20": {
       eventName: {
         ko: "애완용품 박람회",
@@ -707,6 +747,53 @@ export default {
       },
       website: "https://www.vmworld.com/en/us/index.html#"
     },
+    "2019-09-04": {
+      eventName: {
+        ko: "미국치과협회 컨퍼런스",
+        en: "ADA 2019"
+      },
+      date: {
+        start: "2019-09-04",
+        end: "2019-09-08"
+      },
+      location: {
+        en: {
+          name: "Moscone Center North, South, and West",
+          address: "730 Howard st.",
+          city: "San Francisco",
+          state: "CA",
+          zip: "94103"
+        },
+        ko: {
+          name: "모스콘센터",
+          city: "샌프란시스코"
+        }
+      },
+      description:
+        "The ADA FDI World Dental Congress is not only exceptional because it's jointly held by the ADA and FDI -- we're also celebrating ADA's 160th anniversary and the 150th anniversary of the San Francisco Dental Society",
+      exhibitor: "2,000",
+      expectedVisitor: "20,000",
+      exhibition: [
+        "The Digital Future of Dentistry",
+        "ADA Dental Sleep Medicine Conference",
+        "Women in Dentistry",
+        "Dental Hygiene Track",
+        "Pathology Track",
+        "Oral Medicine Track",
+        "Pediatrics Track",
+        "Restorative Track",
+        "Cariology Track",
+        "Occlusion Track"
+      ],
+      images: {
+        thumbnail: "/assets/image/event-images/ada-2019.png",
+        banner:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdG2Slf2-8cdDqM1yrvKAeU07j6h9jDwVoOl7EuP990SFIqeg3BQ",
+        other: []
+      },
+      website:
+        "https://www.ada.org/en/publications/ada-news/2019-archive/february/registration-open-for-ada-fdi-world-dental-congress-in-san-francisco"
+    },
     "2019-09-16": {
       eventName: {
         ko: "오라클 오픈월드",
@@ -797,6 +884,194 @@ export default {
         other: []
       },
       website: "https://techcrunch.com/events/disrupt-sf-2019/"
+    },
+    "2019-10-22": {
+      eventName: {
+        ko: "MWC 19",
+        en: "MWC 2019"
+      },
+      date: {
+        start: "2019-10-22",
+        end: "2019-10-24"
+      },
+      location: {
+        en: {
+          name: "Los Angeles Convention Center",
+          address: "1201 South Figueroa St.",
+          city: "Los Angeles",
+          state: "CA",
+          zip: "90015"
+        },
+        ko: {
+          name: "LA 컨벤션센터",
+          city: "로스앤젤레스"
+        }
+      },
+      description: "",
+      exhibitor: "1,000",
+      expectedVisitor: "15,000",
+      exhibition: [
+        "AI & The Future of Work: Is your Business Ready for Chagne?",
+        "Scaling the Internet of Intelligent Things",
+        "Marketing 5G: First of Best to Market",
+        "Edge Computing: Creating New IoT Applications",
+        "5G: Power, Tlanet, Profit",
+        "The Promise of IoT Connectivity"
+      ],
+      images: {
+        thumbnail:
+          "https://www.mwclosangeles.com/wp-content/themes/theme_mwcla/images/logo-mb.png?v4",
+        banner: "/assets/image/event-images/mwc-2019.gif",
+        other: []
+      },
+      website: "https://www.mwclosangeles.com/"
+    },
+    "2019-11-05": {
+      eventName: {
+        ko: "자동차 부품 박람회",
+        en: "SEMA 2019"
+      },
+      date: {
+        start: "2019-11-05",
+        end: "2019-11-08"
+      },
+      location: {
+        en: {
+          name: "Las Vegas Convention Center",
+          address: "3150 Paradise Rd.",
+          city: "Las Vegas",
+          state: "NV",
+          zip: "89019"
+        },
+        ko: {
+          name: "라스베가스 컨벤션센터",
+          city: "라스베가스"
+        }
+      },
+      description: "",
+      exhibitor: "4,000",
+      expectedVisitor: "100,000",
+      exhibition: [
+        "Accessories",
+        "Air Conditioning",
+        "Audio, Security and Mobile Electronics",
+        "Bedliners",
+        "Body Shop Service / Repair",
+        "Brake System Components",
+        "Business Management Hardware / Software",
+        "Chemicals & Lubricants",
+        "Clothing / Memorabilia",
+        "Emissions Control",
+        "Engines / Engine Parts, Manifolds, Motor Mounts, Valve Covers",
+        "Machine Shop Equipment",
+        "Motorcycle Parts & Accessories",
+        "Off - Road Parts & Accessories",
+        "Paint, Body & Equipment",
+        "Performance Parts / Accessories",
+        "Racing Products",
+        "Replacement Parts",
+        "Restyling / Ground Effects",
+        "RV Parts & Accessories"
+      ],
+      images: {
+        thumbnail:
+          "https://www.semashow.com/sites/all/themes/semashow/logo.png",
+        banner:
+          "http://www.12voltnews.com/wp-content/uploads/2019/04/fen2-0416-sma-19-reg-650x400.jpg",
+        other: []
+      },
+      website: "https://www.semashow.com/"
+    },
+    "2019-11-05_1": {
+      eventName: {
+        ko: "자동차 부품 박람회",
+        en: "AAPEX 2019"
+      },
+      date: {
+        start: "2019-11-05",
+        end: "2019-11-07"
+      },
+      location: {
+        en: {
+          name: "Sands Expo Convention Center",
+          address: "201 Sands Ave.",
+          city: "Las Vegas",
+          state: "NV",
+          zip: "89169"
+        },
+        ko: {
+          name: "샌즈엑스포 컨벤션센터",
+          city: "라스베가스"
+        }
+      },
+      description: "Automotive Aftermarket Products Expo",
+      exhibitor: "2,500",
+      expectedVisitor: "48,000",
+      exhibition: [
+        "Specialized training and hands - on experience on the most in -demand systems",
+        "Build your professional network in Las Vegas",
+        "Work with our Marketing Technicians to design a laser beam- focused approach",
+        "Get a comprehensive read on what will be hitting the industry in this and future years"
+      ],
+      images: {
+        thumbnail:
+          "https://www.aapexshow.com/wp-content/uploads/2019/03/brand.full_.png",
+        banner:
+          "https://www.bullyliner.com/wp-content/uploads/2019/03/bullyliner-AAPEX-Auto-Show.jpg",
+        other: []
+      },
+      website: "https://www.aapexshow.com/"
+    },
+
+    "2019-11-20": {
+      eventName: {
+        ko: "뉴욕 보안장비 박람회",
+        en: "ISC EAST 2019"
+      },
+      date: {
+        start: "2019-11-20",
+        end: "2019-11-21"
+      },
+      location: {
+        en: {
+          name: "JAVITS CENTER NEW YORK",
+          address: "655 W 34th St.",
+          city: "New York",
+          state: "NY",
+          zip: "10001"
+        },
+        ko: {
+          name: "자비츠 컨벤션 센터",
+          city: "뉴욕"
+        }
+      },
+      description: "미국 최대의 통합 보안 업계 전시회",
+      exhibitor: "1,000",
+      expectedVisitor: "30,000",
+      exhibition: [
+        "액세스 제어",
+        "생체 인식",
+        "도난 경보 및 모니터링",
+        "CCTV 및 원격 모니터링",
+        "데이터 보안",
+        "지문 및 얼굴 인식",
+        "화재 경보기 및 감지기, 가스, 연기 및 전문 금속 탐지기",
+        "홈 오토메이션",
+        "잠금 장치",
+        "공공 보안",
+        "주거용 및 상업용 감시 장비",
+        "시스템 통합",
+        "보안 카드 및 관련 특수 잠금 장치",
+        "무선 보안 응용 프로그램"
+      ],
+      images: {
+        thumbnail:
+          "https://security-img.scdn6.secure.raxcdn.com/news/612/isc-east-2018-expansion-920x533.jpg",
+        banner:
+          "https://scontent-sjc3-1.xx.fbcdn.net/v/t1.0-9/57703281_10161865720460387_2535667289043238912_n.png?_nc_cat=103&_nc_oc=AQkoDjQhrYI2jFAm1DJtwrzxWHJ5AgDMv_TIahjuw5-8VC4lA1GcC4iSLg2481bQzTs&_nc_ht=scontent-sjc3-1.xx&oh=efe88664e305a7dad619d2d65a749543&oe=5D50B8A3",
+        other: []
+      },
+      website: "https://www.isceast.com/"
     }
   },
   companies: {

@@ -12,13 +12,14 @@ class Nav extends Component {
     this.db = db;
     this.state = {
       ranks: [
-        ["EDS", "EDS-2019"],
-        ["National Hardware Show", "National-Hardware-Show-2019"],
-        ["SEMICON West", "SEMICON-WEST-2019"],
-        ["INTEROP", "INTEROP-2019"],
-        ["Lightfair International", "Lightfair International 2019"],
-        ["INFOCOMM", "INFOCOMM-2019"],
-        ["E3", "E3-2019"]
+        ["Semicon West", "SEMICON-WEST-2019"],
+        ["ESX 2019", "INFOCOMM-2019"],
+        ["E3", "E3-2019"],
+
+        ["Cyber Security Summit", "CYBER-SECURITY-SUMMIT-2019"],
+        ["Oracle Open World", "ORACLE-OPEN-WORLD-2019"],
+        ["Disrupt SF", "DISRUPT-SF-2019"],
+        ["MWC 19", "MWC-2019"]
       ],
       allEvents: [],
       search: "",

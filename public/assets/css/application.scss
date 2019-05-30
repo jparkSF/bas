@@ -853,10 +853,6 @@ td:first-child {
 .dotstyle {
   display: none;
 }
-#com-list,
-#univ-list {
-  height: 210px;
-}
 
 // .sidenav .closebtn {
 //   position: absolute;
@@ -1092,6 +1088,10 @@ td:first-child {
   .detail-content {
     // margin: 0 40px;
   }
+  #com-list,
+  #univ-list {
+    height: 210px;
+  }
 }
 @media only screen and (max-width: 615px) {
   .info-cards-wrapper {
@@ -1175,6 +1175,13 @@ td:first-child {
   .main-card {
     margin-right: 25px !important;
     width: 300px;
+  }
+  .main-card-container {
+    // height: 260px;
+    &::-webkit-scrollbar-track {
+      display: none;
+      background-color: transparent;
+    }
   }
   .name {
     li {

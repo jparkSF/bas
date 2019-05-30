@@ -200,7 +200,6 @@ class Main extends Component {
               </div>
             );
           })}
-          <div id="slider-page--com" />
         </div>
         <div className="dotnav dotstyle dotstyle-scaleup">
           <ul className="dotnav">
@@ -328,6 +327,7 @@ class Main extends Component {
     let page = position / offset;
 
     window.$(`#slider-page--${type}`).append(`<span>${page}</span>`);
+
     if (page % 1 === 0) {
       this.setState({ [type]: page });
     }
